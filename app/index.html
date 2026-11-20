@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <h1>Leonida Ledger</h1>
+    <p class="subtitle">Grand Theft Auto VI · PlayStation 5 · the best offline guide &amp; tracker for all 55 trophies</p>
+  </div>
+  <div class="masthead-progress" id="mastheadProgress">
+    <div class="big-count"><span id="earnedCount">0</span><span class="of">/ 55 earned</span></div>
+    <div class="grade-counters" id="gradeCounters"></div>
+    <div class="progress-bar"><span id="progressFill"></span></div>
+  </div>
+  <div class="masthead-actions">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json"></label>
+    <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox" checked> Hide story trophies</label>
+  </div>
+</header>
+
+<div class="audit" id="auditStrip"></div>
+
+<nav class="views" id="viewTabs">
+  <button type="button" data-view="checklist" class="active">Checklist</button>
+  <button type="button" data-view="roadmap">Roadmap to platinum</button>
+  <button type="button" data-view="missables">Missables &amp; warnings</button>
+  <button type="button" data-view="sources">Sources &amp; disagreements</button>
+  <span class="next-up" id="nextUp"></span>
+</nav>
+
+<div class="filters" id="filters">
+  <label class="search">Search <input id="searchBox" type="search" placeholder="trophy name or description…"></label>
+  <span class="chip-row" id="kindChips"></span>
+  <label>Grade <select id="gradeFilter"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+  <label>Show <select id="earnedFilter"><option value="all">All</option><option value="earned">Earned</option><option value="remaining">Remaining</option></select></label>
+</div>
+
+<main id="viewChecklist" class="view">
+  <section class="col-checklist">
+    <h2 id="listHeading">Checklist — 55 trophies</h2>
+    <ul class="trophy-list" id="trophyList"></ul>
+  </section>
+  <section class="col-detail" id="detailPane"></section>
+  <aside class="col-sources" id="sourcesPanel"></aside>
+</main>
+
+<main id="viewRoadmap" class="view" hidden>
+  <h2>Roadmap to the platinum — about 200–300 hours, one playthrough</h2>
+  <p class="view-intro">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Sources disagree on two points — the final mission's chapter and the meditation count — and both versions are shown under Sources &amp; disagreements.</p>
+  <div class="roadmap" id="roadmapStages"></div>
+</main>
+
+<main id="viewMissables" class="view" hidden>
+  <h2>Missables &amp; warnings</h2>
+  <p class="view-intro">Only one trophy on the whole list can be missed — and only maybe. Everything else can be finished after the story, because there is no mission replay and no New Game+.</p>
+  <div class="missables" id="missablesBody"></div>
+</main>
+
+<main id="viewSources" class="view" hidden>
+  <h2>Sources &amp; disagreements</h2>
+  <p class="view-intro">Every guide in this app is written in our own words and cites its sources. A specific location or step that cites no source gets no credit — so each trophy names the guides its facts come from, below.</p>
+  <div class="sources-full" id="sourcesFull"></div>
+</main>
+
+<footer>
+  <p><strong>Unofficial fan guide.</strong> Not affiliated with Rockstar Games. No Rockstar logo, artwork, box art or game screenshot is used anywhere in this guide. Trophy names, descriptions and grades are shown as PlayStation publishes them (Exophase and PSNProfiles, 18 Nov 2026 — the two agree on all 55). Every guide is written in our own words and cites its sources; never copy a guide's text.</p>
+  <p>Rules that protect your run: no mission replay and no New Game+, so keep a manual save at the start of every chapter and one before the final mission (15 manual slots plus one autosave) [2]. Cheats disable trophies and saving — keep your trophy run cheat-free [6]. The whole list is offline: 0 online trophies, 0 DLC trophies [5].</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
